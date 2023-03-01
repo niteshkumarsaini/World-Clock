@@ -211,6 +211,15 @@ else if(displayhour<10 && Mydata.sec<10){
 else if(displaymins<10 && Mydata.sec<10){
   document.getElementById('displayTime').innerText=`${displayhour}:0${displaymins}:0${Mydata.sec} ${meridiem}`;
 }
+else if(displayhour<10 ){
+  document.getElementById('displayTime').innerText=`0${displayhour}:${displaymins}:${Mydata.sec} ${meridiem}`;
+}
+else if(displaymins<10 ){
+  document.getElementById('displayTime').innerText=`${displayhour}:0${displaymins}:${Mydata.sec} ${meridiem}`;
+}
+else if(Mydata.sec<10 ){
+  document.getElementById('displayTime').innerText=`${displayhour}:${displaymins}:0${Mydata.sec} ${meridiem}`;
+}
 else{
   document.getElementById('displayTime').innerText=`${displayhour}:${displaymins}:${Mydata.sec} ${meridiem}`;
 }
